@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<script>
+	function setSize () {
+		var oHtml = document.getElementsByTagName("html")[0];
+		var iWidth = oHtml.getBoundingClientRect().width;
+		console.log(oHtml.getBoundingClientRect());
+		oHtml.style.fontSize = iWidth/16 +'px';
+	}
+	window.addEventListener('resize', setSize,false);
+	window.addEventListener('orientationchange', setSize,false);
+	setSize();
+	</script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 4rem;
+			height: 4rem;
+			background-color: red;
+			border:1px solid #000;
+			float: left;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+</html>
